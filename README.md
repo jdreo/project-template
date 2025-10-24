@@ -32,6 +32,10 @@ git commit -m "Initial commit"
 ```
 3. Install the dependencies. We recommend [uv](https://docs.astral.sh/uv/) for best performance, but [Poetry](https://python-poetry.org/) is also supported:
 
+!!! Note:
+    The BioCypher project is in the process of migrating to uv.
+    We recommend all users adopt uv, as backward compatibility with Poetry is planned to be phased out in future versions.
+
 **Using uv (recommended):**
 ```{bash}
 uv sync
@@ -42,7 +46,7 @@ uv sync
 poetry install
 ```
 
-4. You are ready to go!
+1. You are ready to go!
 
 **With uv:**
 ```{bash}
@@ -51,8 +55,7 @@ uv run python create_knowledge_graph.py
 
 **With Poetry:**
 ```{bash}
-poetry shell
-python create_knowledge_graph.py
+poetry run python create_knowledge_graph.py
 ```
 
 ## 🛠 Usage
@@ -155,6 +158,11 @@ using the following commands:
 ```{bash}
 uv build
 uv publish
+```
+
+```{bash}
+poetry build
+poetry publish
 ```
 
 If you don't want to publish your package to PyPI, you can also install it from
