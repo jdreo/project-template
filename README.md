@@ -30,13 +30,26 @@ git add .
 git commit -m "Initial commit"
 # (you can add your remote repository here)
 ```
-3. Install the dependencies using [Poetry](https://python-poetry.org/). (Or feel
-free to use your own dependency management system. We provide a `pyproject.toml`
-to define dependencies.)
+3. Install the dependencies. We recommend [uv](https://docs.astral.sh/uv/) for best performance, but [Poetry](https://python-poetry.org/) is also supported:
+
+**Using uv (recommended):**
+```{bash}
+uv sync
+```
+
+**Using Poetry:**
 ```{bash}
 poetry install
 ```
+
 4. You are ready to go!
+
+**With uv:**
+```{bash}
+uv run python create_knowledge_graph.py
+```
+
+**With Poetry:**
 ```{bash}
 poetry shell
 python create_knowledge_graph.py
@@ -131,21 +144,21 @@ separators used, and other options. More on its use can be found in the
 
 After adding your adapter(s) to the `adapters` directory, you may want to
 publish them for easier reuse. To create a package to distribute your own
-adapter(s), we recommend using [Poetry](https://python-poetry.org/). Poetry,
-after setup, allows you to publish your package to PyPI using few simple
+adapter(s), we recommend using [uv](https://docs.astral.sh/uv/). uv,
+after setup, allows you to build and publish your package to PyPI using simple
 commands. To set up your package, rename the `template_package` directory to
 your desired package name and update the `pyproject.toml` file accordingly. Most
 importantly, update the `name`,`author`, and `version` fields. You can also add
-a `description` and a `license`.  Then, you can publish your package to PyPI
+a `description` and a `license`.  Then, you can build and publish your package to PyPI
 using the following commands:
 
 ```{bash}
-poetry build
-poetry publish
+uv build
+uv publish
 ```
 
 If you don't want to publish your package to PyPI, you can also install it from
-GitHub using the respective functions of poetry or pip.
+GitHub using uv or pip.
 
 ### Further reading / code
 
