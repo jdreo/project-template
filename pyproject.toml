@@ -35,6 +35,7 @@ authors = [
 ]
 license = "MIT"
 readme = "README.md"
+packages = [{include = "template_package"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
