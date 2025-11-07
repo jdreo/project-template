@@ -38,14 +38,14 @@ wheels = [
 
 [[package]]
 name = "biocypher-project-template"
-version = "0.1.0"
+version = "0.11.0"
 source = { editable = "." }
 dependencies = [
     { name = "biocypher" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "biocypher", specifier = ">=0.10.1" }]
+requires-dist = [{ name = "biocypher", specifier = ">=0.11.0" }]
 
 [[package]]
 name = "certifi"
