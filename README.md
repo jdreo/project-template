@@ -1,5 +1,10 @@
 # BioCypher project template
 
+> [!NOTE]
+> This template is deprecated. In the future, we will maintain our
+> [cookiecutter](https://github.com/biocypher/biocypher-cookiecutter-template)
+> template instead.
+
 A quick way to set up a BioCypher-driven knowledge graph pipeline. Please make
 sure to refer to the [Usage](#-usage) section for details on how it works.
 
@@ -114,8 +119,8 @@ environment.
 
 `python create_knowledge_graph.py` will create a knowledge graph from the
 example data included in this repository (borrowed from the [BioCypher
-tutorial](https://biocypher.org/tutorial.html)). To do that, it uses the
-following components:
+tutorial](https://biocypher.org/BioCypher/learn/tutorials/tutorial001_basics/)).
+To do that, it uses the following components:
 
 - `create_knowledge_graph.py`: the main script that orchestrates the pipeline.
 It brings together the BioCypher package with the data sources. To build a 
@@ -136,12 +141,12 @@ adapters.
 that defines the schema of the knowledge graph. It is used by BioCypher to map
 the data source to the knowledge representation on the basis of ontology (see
 [this part of the BioCypher 
-tutorial](https://biocypher.org/tutorial-ontology.html)).
+tutorial](https://biocypher.org/BioCypher/learn/tutorials/tutorial002_handling_ontologies/)).
 
 - `biocypher_config.yaml`: a configuration file (found in the `config` 
 directory) that defines some BioCypher parameters, such as the mode, the 
 separators used, and other options. More on its use can be found in the
-[Documentation](https://biocypher.org/installation.html#configuration).
+[Documentation](https://biocypher.org/BioCypher/reference/biocypher-config/).
 
 ### Publishing your own adapters
 
